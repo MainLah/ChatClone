@@ -1,0 +1,10 @@
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#1f1f1f];
+  }
+}
