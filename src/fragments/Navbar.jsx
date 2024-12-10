@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center min-h-20">
+    <div className="flex justify-between items-center w-full min-h-20 fixed bg-[#1f1f1f]">
       <div>
         <button className="px-5">
           <i class="bi bi-list text-[#ededed] text-2xl opacity-75"></i>

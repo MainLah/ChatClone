@@ -5,9 +5,9 @@ import ChatBox from "../fragments/ChatBox";
 const HomePage = () => {
   return (
     <>
-      <Navbar />
       <div className="w-screen h-screen">
-        <div>
+        <Navbar />
+        <div className="pt-20">
           <ChatBox />
         </div>
       </div>
