@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <div className="w-screen h-screen">
         <Navbar />
-        <div className="pt-20">
+        <div className="pt-20 pb-32 h-screen">
           <ChatBox />
         </div>
         <ChatInput />
