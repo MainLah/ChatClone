@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../fragments/Navbar";
 import ChatBox from "../fragments/ChatBox";
+import ChatInput from "../components/ChatInput";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
         <div className="pt-20">
           <ChatBox />
         </div>
+        <ChatInput />
       </div>
     </>
   );
