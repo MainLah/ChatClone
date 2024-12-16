@@ -10,12 +10,18 @@ const PopupNav = () => {
       style={{ display: `${!navIsOpen ? "none" : "block"}` }}
       onClick={() => (navIsOpen ? setNavIsOpen(false) : setNavIsOpen(true))}
     >
-      <div className="w-1/3 absolute left-0 inset-y-1/2">
+      <div className="flex justify-center items-center w-2/3 h-full absolute left-0 bg-[#1f1f1f] border-r border-r-slate-500">
         <ul>
-          {Array(3)
+          {Array(15)
             .fill("")
             .map((_, i) => (
-              <PopupNavItem key={i} />
+              <PopupNavItem
+                key={i}
+                arrayOfList={Array(15)
+                  .fill("")
+                  .map((x, z) => (x = `Percakapan ${z + 1}`))}
+                index={i}
+              />
             ))}
         </ul>
       </div>

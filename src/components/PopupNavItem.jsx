@@ -1,7 +1,8 @@
 import React from "react";
 
-const PopupNavItem = () => {
-  return <li className="text-[#ededed] px-2">asd</li>;
+const PopupNavItem = (props) => {
+  const { arrayOfList, index } = props;
+  return <li className="text-[#ededed] p-2">{arrayOfList[index]}</li>;
 };
 
 export default PopupNavItem;
