@@ -10,7 +10,7 @@ const ChatInput = () => {
           placeholder="Message ChatClone"
         />
         <div className="bg-[#2e2d2d] rounded-b-3xl flex justify-end w-full pr-5 pb-2">
-          <button>
+          <button className="focus:outline-none cursor-pointer">
             <i class="bi bi-send text-[#ededed]"></i>
           </button>
         </div>
