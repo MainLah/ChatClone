@@ -8,7 +8,7 @@ const PopupNav = () => {
     <div
       className="w-full hidden h-full absolute left-0 backdrop-blur-[1px]"
       style={{ display: `${!navIsOpen ? "none" : "block"}` }}
-      onClick={() => (navIsOpen ? setNavIsOpen(false) : setNavIsOpen(true))}
+      onClick={() => setNavIsOpen(!navIsOpen)}
     >
       <div className="flex justify-center items-center w-2/3 h-full absolute left-0 bg-[#1f1f1f] border-r border-r-slate-500">
         <ul>
