@@ -12,8 +12,8 @@ const HomePage = () => {
   return (
     <>
       <div className="w-screen h-screen">
-        <Navbar />
         <Context.Provider value={[navIsOpen, setNavIsOpen]}>
+          <Navbar />
           <PopupNav />
         </Context.Provider>
         <div className="pt-20 pb-32 h-screen">

@@ -7,8 +7,8 @@ const PopupNav = () => {
   return (
     <div
       className="w-full hidden h-full absolute left-0 backdrop-blur-[1px]"
-      style={{ display: `${navIsOpen ? "none" : "block"}` }}
-      onClick={() => setNavIsOpen(!navIsOpen)}
+      style={{ display: `${!navIsOpen ? "none" : "block"}` }}
+      onClick={() => (navIsOpen ? setNavIsOpen(false) : setNavIsOpen(true))}
     >
       <div className="w-1/3 absolute left-0 inset-y-1/2">
         <ul>
