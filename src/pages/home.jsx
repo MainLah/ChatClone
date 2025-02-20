@@ -16,7 +16,7 @@ const HomePage = () => {
           <Navbar />
           <PopupNav />
         </Context.Provider>
-        <div className="pt-20 pb-32 h-screen">
+        <div className="h-screen pt-20 pb-32">
           <ChatBox />
         </div>
         <ChatInput />

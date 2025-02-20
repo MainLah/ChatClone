@@ -17,7 +17,7 @@ const Navbar = () => {
         <p className="text-lg opacity-75">ChatClone</p>
       </div>
       <div className="text-[#ededed] px-5">
-        <i className="bi bi-pencil-square text-xl opacity-75"></i>
+        <i className="text-xl opacity-75 bi bi-pencil-square"></i>
       </div>
     </div>
   );
