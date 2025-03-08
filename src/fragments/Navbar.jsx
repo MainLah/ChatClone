@@ -1,8 +1,8 @@
 import { React, useContext } from "react";
-import { Context } from "../pages/home";
+import { openNavbarContext } from "../pages/home";
 
 const Navbar = () => {
-  const [navIsOpen, setNavIsOpen] = useContext(Context);
+  const [navIsOpen, setNavIsOpen] = useContext(openNavbarContext);
   return (
     <div className="flex justify-between items-center w-full min-h-20 fixed bg-[#1f1f1f]">
       <div>

@@ -4,20 +4,26 @@ import ChatBox from "../fragments/ChatBox";
 import ChatInput from "../components/ChatInput";
 import PopupNav from "../fragments/PopupNav";
 
-export const Context = createContext([false, () => {}]);
+export const openNavbarContext = createContext([false, () => {}]);
+export const openChatBoxContext = createContext([false, () => {}]);
 
 const HomePage = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
+  const [listOfMessages, setListOfMessages] = useState([]);
 
   return (
     <>
       <div className="w-screen h-screen">
-        <Context.Provider value={[navIsOpen, setNavIsOpen]}>
+        <openNavbarContext.Provider value={[navIsOpen, setNavIsOpen]}>
           <Navbar />
           <PopupNav />
-        </Context.Provider>
+        </openNavbarContext.Provider>
         <div className="h-screen pt-20 pb-32">
-          <ChatBox />
+          <openChatBoxContext.Provider
+            value={[listOfMessages, setListOfMessages]}
+          >
+            <ChatBox />
+          </openChatBoxContext.Provider>
         </div>
         <ChatInput />
       </div>

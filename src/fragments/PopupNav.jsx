@@ -1,9 +1,9 @@
 import { React, useContext } from "react";
 import PopupNavItem from "../components/PopupNavItem";
-import { Context } from "../pages/home";
+import { openNavbarContext } from "../pages/home";
 
 const PopupNav = () => {
-  const [navIsOpen, setNavIsOpen] = useContext(Context);
+  const [navIsOpen, setNavIsOpen] = useContext(openNavbarContext);
   return (
     <div
       className="w-full hidden h-full absolute left-0 backdrop-blur-[1px]"
