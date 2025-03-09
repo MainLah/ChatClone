@@ -9,7 +9,7 @@ export const openChatBoxContext = createContext([false, () => {}]);
 
 const HomePage = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
-  const [listOfMessages, setListOfMessages] = useState([]);
+  const [listOfMessages, setListOfMessages] = useState(["Check", "Test"]);
 
   return (
     <>
@@ -22,10 +22,12 @@ const HomePage = () => {
           <openChatBoxContext.Provider
             value={[listOfMessages, setListOfMessages]}
           >
-            <ChatBox />
+            {listOfMessages.map((message, index) => (
+              <ChatBox key={index} message={message} />
+            ))}
+            <ChatInput /> {/* Move ChatInput inside the provider */}
           </openChatBoxContext.Provider>
         </div>
-        <ChatInput />
       </div>
     </>
   );
