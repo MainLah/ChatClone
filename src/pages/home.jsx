@@ -25,7 +25,7 @@ const HomePage = () => {
             {listOfMessages.map((message, index) => (
               <ChatBox key={index} message={message} />
             ))}
-            <ChatInput /> {/* Move ChatInput inside the provider */}
+            <ChatInput />
           </openChatBoxContext.Provider>
         </div>
       </div>
