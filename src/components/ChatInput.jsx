@@ -10,8 +10,9 @@ const ChatInput = () => {
       <form>
         <input
           type="text"
-          className="bg-[#2e2d2d] rounded-t-3xl focus:outline-none caret-[#ededed] w-full h-14 pl-5 "
+          className="bg-[#2e2d2d] rounded-t-3xl focus:outline-none caret-[#ededed] w-full h-14 pl-5 text-[#ededed]"
           placeholder="Message ChatClone"
+          value={message} // biar inputnya kosong setelah submit
           onChange={(e) => {
             setMessage(e.target.value);
           }}
