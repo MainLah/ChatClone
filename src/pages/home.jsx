@@ -13,21 +13,21 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="w-screen h-screen">
+      <div className="flex flex-col w-screen h-screen">
         <openNavbarContext.Provider value={[navIsOpen, setNavIsOpen]}>
           <Navbar />
           <PopupNav />
         </openNavbarContext.Provider>
-        <div className="h-screen pt-20 pb-32">
-          <openChatBoxContext.Provider
-            value={[listOfMessages, setListOfMessages]}
-          >
+        <openChatBoxContext.Provider
+          value={[listOfMessages, setListOfMessages]}
+        >
+          <div className="flex-grow pt-20 pb-32 overflow-auto">
             {listOfMessages.map((message, index) => (
               <ChatBox key={index} message={message} />
             ))}
-            <ChatInput />
-          </openChatBoxContext.Provider>
-        </div>
+          </div>
+          <ChatInput />
+        </openChatBoxContext.Provider>
       </div>
     </>
   );

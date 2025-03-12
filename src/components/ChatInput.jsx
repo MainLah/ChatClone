@@ -6,7 +6,7 @@ const ChatInput = () => {
   const [message, setMessage] = useState("");
 
   return (
-    <div className="bg-[#1f1f1f] fixed bottom-0 w-full px-5 pb-5">
+    <div className="bg-[#1f1f1f] bottom-0 w-full p-5">
       <form>
         <input
           type="text"
